@@ -16,11 +16,11 @@ Given:
   Balance the routes across vehicles to avoid overloading
 
 # Technologies Used
-  Python
-  DEAP – for genetic algorithms
-  NumPy – for numerical computations
-  Matplotlib – for plotting and route visualization
-  Random – for generating location coordinates
+  ##Python
+  ##DEAP – for genetic algorithms
+  ##NumPy – for numerical computations
+  ##Matplotlib – for plotting and route visualization
+  ##Random – for generating location coordinates
 
 # How It Works
 # Initialization
