@@ -1,46 +1,35 @@
-# Vehicle_Routing_Problem using Genetic Algorithm (VRP-GA)
-This project demonstrates the use of Genetic Algorithms (GA) to solve a simplified Vehicle Routing Problem (VRP) using Python and the DEAP evolutionary computation framework.
+## 2. Vehicle Routing Problem using Genetic Algorithm (VRP-GA)
 
-The goal is to efficiently assign a set of delivery locations to multiple vehicles starting and ending at a central depot, optimizing for both minimum total distance traveled and balanced workload across vehicles.
+Solves a simplified version of the VRP using evolutionary algorithms with route balancing.
 
-# Problem Description
-Given:
--A depot (fixed central location)
--A list of randomly generated delivery locations
--A fleet of vehicles
+###  Technologies Used
 
-# The task is to:
-  Distribute the delivery points among the vehicles
-  Ensure each route starts and ends at the depot
-  Minimize the total travel distance
-  Balance the routes across vehicles to avoid overloading
+- Python
+- DEAP (Genetic Algorithm)
+- NumPy
+- Matplotlib
 
-# Technologies Used
--Python
--DEAP – for genetic algorithms
--NumPy – for numerical computations
--Matplotlib – for plotting and route visualization
--Random – for generating location coordinates
+###  Problem Setup
 
-# How It Works
-# Initialization
-  Generate 10 random delivery locations on a 2D plane.
-  Depot is set at coordinate (50, 50).
-  Number of vehicles: 3.
+- **Depot**: `[50, 50]`  
+- **Locations**: 10 randomly generated (x, y) coordinates  
+- **Vehicles**: 3
 
-# GA Setup
-  Individual: a permutation of delivery locations
-  Fitness: (total_distance, route_balance_penalty)
-  Crossover: Partial Match Crossover (cxPartialyMatched)
-  Mutation: Index shuffling (mutShuffleIndexes)
-  Selection: Roulette Wheel Selection (selRoulette)
+###  Genetic Algorithm Steps
 
-# Fitness Function
-  Calculates the total distance for each vehicle's route.
-  Computes the standard deviation of distances for route balance.
-  Objective: Minimize both total distance and imbalance.
+1. **Population Representation**  
+   - Each individual is a permutation of delivery locations
 
-# Output
-  Route for each vehicle is plotted with matplotlib.
-  Best individual is stored in Hall of Fame.
+2. **Fitness Function**  
+   - Minimizes total distance  
+   - Penalizes route imbalance using standard deviation across vehicle routes
 
+3. **Genetic Operators**
+   - **Crossover**: `cxPartialyMatched`
+   - **Mutation**: `mutShuffleIndexes`
+   - **Selection**: `selRoulette`
+
+###  Visualization
+
+- Each vehicle's route is plotted starting and ending at the depot
+- Shows optimal route balancing across the fleet
