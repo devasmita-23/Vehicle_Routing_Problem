@@ -5,9 +5,9 @@ The goal is to efficiently assign a set of delivery locations to multiple vehicl
 
 # Problem Description
 Given:
- A depot (fixed central location)
- A list of randomly generated delivery locations
- A fleet of vehicles
+ ---A depot (fixed central location)
+ ---A list of randomly generated delivery locations
+ ---A fleet of vehicles
 
 # The task is to:
   Distribute the delivery points among the vehicles
