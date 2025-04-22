@@ -5,28 +5,28 @@ The goal is to efficiently assign a set of delivery locations to multiple vehicl
 
 # Problem Description
 Given:
- -A depot (fixed central location)
- -A list of randomly generated delivery locations
- -A fleet of vehicles
+ A depot (fixed central location)
+ A list of randomly generated delivery locations
+ A fleet of vehicles
 
 # The task is to:
-  -Distribute the delivery points among the vehicles
-  -Ensure each route starts and ends at the depot
-  -Minimize the total travel distance
-  -Balance the routes across vehicles to avoid overloading
+  Distribute the delivery points among the vehicles
+  Ensure each route starts and ends at the depot
+  Minimize the total travel distance
+  Balance the routes across vehicles to avoid overloading
 
 # Technologies Used
-  -Python
-  -DEAP – for genetic algorithms
-  -NumPy – for numerical computations
-  -Matplotlib – for plotting and route visualization
-  -Random – for generating location coordinates
+  Python
+  DEAP – for genetic algorithms
+  NumPy – for numerical computations
+  Matplotlib – for plotting and route visualization
+  Random – for generating location coordinates
 
 # How It Works
 # Initialization
-  -Generate 10 random delivery locations on a 2D plane.
-  -Depot is set at coordinate (50, 50).
-  -Number of vehicles: 3.
+  Generate 10 random delivery locations on a 2D plane.
+  Depot is set at coordinate (50, 50).
+  Number of vehicles: 3.
 
 # GA Setup
   Individual: a permutation of delivery locations
@@ -36,11 +36,11 @@ Given:
   Selection: Roulette Wheel Selection (selRoulette)
 
 # Fitness Function
-  - Calculates the total distance for each vehicle's route.
-  - Computes the standard deviation of distances for route balance.
-  - Objective: Minimize both total distance and imbalance.
+  Calculates the total distance for each vehicle's route.
+  Computes the standard deviation of distances for route balance.
+  Objective: Minimize both total distance and imbalance.
 
 # Output
-  -Route for each vehicle is plotted with matplotlib.
-  -Best individual is stored in Hall of Fame.
+  Route for each vehicle is plotted with matplotlib.
+  Best individual is stored in Hall of Fame.
 
